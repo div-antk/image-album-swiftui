@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AlbumView: View {
+  
+  @EnvironmentObject private var userData: UserData
+  
   let name: String
   let path: String
   let isFavorite: Bool
@@ -68,7 +71,8 @@ struct AlbumView: View {
           Text("0")
         }
         else {
-          Text("0")
+          // 配列のcountで画像数を文字列変換して表示
+          Text(String(self.userData.images.count))
         }
       }
       .foregroundColor(.primary)
@@ -78,9 +82,10 @@ struct AlbumView: View {
 
 struct AlbumView_Previews: PreviewProvider {
   static var previews: some View {
+    // プレビュー画面で表示するためにenviromentObjectを追加
     AlbumView(name: "お気に入り",
               path: "",
-              isFavorite: true)
+              isFavorite: true).environmentObject(UserData())
   }
 }
 
