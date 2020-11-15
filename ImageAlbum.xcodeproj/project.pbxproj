@@ -17,6 +17,7 @@
 		3BC269A7256108C4003609A3 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269A6256108C4003609A3 /* ImageData.swift */; };
 		3BC269AB25610912003609A3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269AA25610912003609A3 /* UserData.swift */; };
 		3BC269AE2561152B003609A3 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269AD2561152B003609A3 /* ImageList.swift */; };
+		3BC269B225611A92003609A3 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B125611A92003609A3 /* ImageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3BC269A6256108C4003609A3 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		3BC269AA25610912003609A3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BC269AD2561152B003609A3 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		3BC269B125611A92003609A3 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		3BC269A025610673003609A3 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				3BC269B125611A92003609A3 /* ImageListView.swift */,
 				3BC269A12561068B003609A3 /* AlbumView.swift */,
 			);
 			path = "Supporting Views";
@@ -175,6 +178,7 @@
 			files = (
 				3BC269AB25610912003609A3 /* UserData.swift in Sources */,
 				3BC269842560F2F9003609A3 /* AppDelegate.swift in Sources */,
+				3BC269B225611A92003609A3 /* ImageListView.swift in Sources */,
 				3BC269862560F2F9003609A3 /* SceneDelegate.swift in Sources */,
 				3BC269A22561068B003609A3 /* AlbumView.swift in Sources */,
 				3BC269AE2561152B003609A3 /* ImageList.swift in Sources */,

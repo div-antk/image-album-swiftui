@@ -16,7 +16,7 @@ struct ImageList: View {
     List {
       // 画像情報配列の数分リストを表示
       ForEach (self.userData.images) { item in
-        Text("")
+        ImageListView(id: item.id)
       }
     }
     .navigationBarTitle(Text("画像リスト"))
