@@ -15,14 +15,19 @@ struct Album: View {
     
     NavigationView {
       VStack {
-        
-        // pathに画像ファイルパスを設定する。画像がない場合は空文字
-        AlbumView(name: "すべての項目",
-                  path: self.userData.images.count > 0 ? self.userData.images[0].path : "",
-                  isFavorite: false)
-        AlbumView(name: "お気に入り",
-                  path: self.userData.images.count > 1 ? self.userData.images[1].path : "",
-                  isFavorite: true)
+        // ナビゲーションリンクを追加する
+        NavigationLink(destination: ImageList()) {
+          // pathに画像ファイルパスを設定する。画像がない場合は空文字
+          AlbumView(name: "すべての項目",
+                    path: self.userData.images.count > 0 ? self.userData.images[0].path : "",
+                    isFavorite: false)
+        }
+        // ナビゲーションリンクを追加する
+        NavigationLink(destination: ImageList()) {
+          AlbumView(name: "お気に入り",
+                    path: self.userData.images.count > 1 ? self.userData.images[1].path : "",
+                    isFavorite: true)
+        }
       }
       // VStack{}にnavigationBarTitle()を追加
       .navigationTitle(Text("アルバム"))
