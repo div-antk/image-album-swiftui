@@ -35,28 +35,41 @@ struct ImageListView: View {
         // 画面いっぱいまで余白を追加
         Spacer()
         
-        // お気に入りの場合
-        if self.userData.images[self.id].isFavorite {
+        // ハート画像をGroupで囲む。Groupで囲んだビューにはまとめて同じ処理を追加できる
+        Group {
           
-          // 色付きのハート
-          Image(systemName: "heart.fill")
-            .foregroundColor(Color.pink)
-        } else {
-          // 色なしハート
-          Image(systemName: "heart")
-            .foregroundColor(Color.gray)
+          // お気に入りの場合
+          if self.userData.images[self.id].isFavorite {
+            
+            // 色付きのハート
+            Image(systemName: "heart.fill")
+              .foregroundColor(Color.pink)
+          } else {
+            // 色なしハート
+            Image(systemName: "heart")
+              .foregroundColor(Color.gray)
+          }
+        }
+        else {
+          // 画像情報がない場合、Noneを表示
+          Text("None" )
         }
       }
-      else {
-        // 画像情報がない場合、Noneを表示
-        Text("None" )
+      // ハート画像がタップされた場合
+      .onTapGesture {
+        
+        // お気に入り値の反転
+        self.userData.images[self.id].isFavorite.toggle()
+        
+        // お気に入りの保存
+        saveFavorite(name: self,userData.images[self.id].name,
+                     isFavorite: self.userData.images[self.id].isFavorite)
       }
     }
   }
-}
-
-struct ImageListView_Previews: PreviewProvider {
-  static var previews: some View {
-    ImageListView(id: 0).environmentObject(UserData())
+  
+  struct ImageListView_Previews: PreviewProvider {
+    static var previews: some View {
+      ImageListView(id: 0).environmentObject(UserData())
+    }
   }
-}
