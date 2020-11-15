@@ -18,6 +18,7 @@
 		3BC269AB25610912003609A3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269AA25610912003609A3 /* UserData.swift */; };
 		3BC269AE2561152B003609A3 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269AD2561152B003609A3 /* ImageList.swift */; };
 		3BC269B225611A92003609A3 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B125611A92003609A3 /* ImageListView.swift */; };
+		3BC269B8256129B1003609A3 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B7256129B1003609A3 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3BC269AA25610912003609A3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BC269AD2561152B003609A3 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		3BC269B125611A92003609A3 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
+		3BC269B7256129B1003609A3 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		3BC269822560F2F9003609A3 /* ImageAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				3BC269B625612998003609A3 /* Settings */,
 				3BC269A52561089B003609A3 /* Models */,
 				3BC269A025610673003609A3 /* Supporting Views */,
 				3BC269832560F2F9003609A3 /* AppDelegate.swift */,
@@ -104,6 +107,14 @@
 				3BC269AA25610912003609A3 /* UserData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3BC269B625612998003609A3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3BC269B7256129B1003609A3 /* Setting.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				3BC269AE2561152B003609A3 /* ImageList.swift in Sources */,
 				3BC269A7256108C4003609A3 /* ImageData.swift in Sources */,
 				3BC2699A2561005B003609A3 /* Album.swift in Sources */,
+				3BC269B8256129B1003609A3 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

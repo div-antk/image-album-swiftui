@@ -10,14 +10,16 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                             .userDomainMask,
                                                             true)[0]
     print(documentsPath)
+    
+    // お気に入り情報のデフォルト値として空配列を設定
+    let userDefaults = UserDefaults.standard
+    userDefaults.register(defaults: [UserDafaultsKey.arrayFavorite: []])
     
     return true
   }
