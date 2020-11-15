@@ -13,6 +13,7 @@
 		3BC2698D2560F2FC003609A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2698C2560F2FC003609A3 /* Preview Assets.xcassets */; };
 		3BC269902560F2FC003609A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2698E2560F2FC003609A3 /* LaunchScreen.storyboard */; };
 		3BC2699A2561005B003609A3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269992561005B003609A3 /* Album.swift */; };
+		3BC269A22561068B003609A3 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269A12561068B003609A3 /* AlbumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3BC2698F2560F2FC003609A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BC269912560F2FC003609A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BC269992561005B003609A3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3BC269A12561068B003609A3 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		3BC269822560F2F9003609A3 /* ImageAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				3BC269A025610673003609A3 /* Supporting Views */,
 				3BC269832560F2F9003609A3 /* AppDelegate.swift */,
 				3BC269852560F2F9003609A3 /* SceneDelegate.swift */,
 				3BC269992561005B003609A3 /* Album.swift */,
@@ -73,6 +76,14 @@
 				3BC2698C2560F2FC003609A3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BC269A025610673003609A3 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BC269A12561068B003609A3 /* AlbumView.swift */,
+			);
+			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			files = (
 				3BC269842560F2F9003609A3 /* AppDelegate.swift in Sources */,
 				3BC269862560F2F9003609A3 /* SceneDelegate.swift in Sources */,
+				3BC269A22561068B003609A3 /* AlbumView.swift in Sources */,
 				3BC2699A2561005B003609A3 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
