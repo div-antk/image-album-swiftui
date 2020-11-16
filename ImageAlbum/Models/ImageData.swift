@@ -34,8 +34,8 @@ func loadImageInfos() -> Array<ImageInfo> {
   // ファイル名称を昇順で並び替え
   fileNames.sort { $0 < $1 }
   
-  // お気に入り情報を取得する
-  let favoriteArray: Array<String> = [] // 後で変更。現在は空配列を代入
+  // loadFavorite関数でお気に入り情報を取得する
+  let favoriteArray: Array<String> = loadFavorite()
   
   // 画像情報の構造体に設定する
   var imageInfos: Array<ImageInfo> = []

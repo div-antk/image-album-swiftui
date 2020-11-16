@@ -50,6 +50,7 @@ struct ImageListView: View {
               .foregroundColor(Color.gray)
           }
         }
+        
         // ハート画像がタップされた場合
         .onTapGesture {
           
@@ -60,17 +61,17 @@ struct ImageListView: View {
           saveFavorite(name: self.userData.images[self.id].name,
                        isFavorite: self.userData.images[self.id].isFavorite)
         }
-        else {
-          // 画像情報がない場合、Noneを表示
-          Text("None" )
-        }
+      } else {
+        // 画像情報がない場合、Noneを表示
+        Text("None" )
       }
     }
   }
-  
-  struct ImageListView_Previews: PreviewProvider {
-    static var previews: some View {
-      ImageListView(id: 0).environmentObject(UserData())
-    }
+}
+
+struct ImageListView_Previews: PreviewProvider {
+  static var previews: some View {
+    ImageListView(id: 0).environmentObject(UserData())
   }
 }
+
