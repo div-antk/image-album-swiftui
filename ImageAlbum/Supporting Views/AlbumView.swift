@@ -68,7 +68,7 @@ struct AlbumView: View {
       // 画像数
       Group {
         if self.isFavorite == true {
-          Text("0")
+          Text(String(countFavorite(images: self.userData.images)))
         }
         else {
           // 配列のcountで画像数を文字列変換して表示

@@ -50,20 +50,20 @@ struct ImageListView: View {
               .foregroundColor(Color.gray)
           }
         }
+        // ハート画像がタップされた場合
+        .onTapGesture {
+          
+          // お気に入り値の反転
+          self.userData.images[self.id].isFavorite.toggle()
+          
+          // お気に入りの保存
+          saveFavorite(name: self.userData.images[self.id].name,
+                       isFavorite: self.userData.images[self.id].isFavorite)
+        }
         else {
           // 画像情報がない場合、Noneを表示
           Text("None" )
         }
-      }
-      // ハート画像がタップされた場合
-      .onTapGesture {
-        
-        // お気に入り値の反転
-        self.userData.images[self.id].isFavorite.toggle()
-        
-        // お気に入りの保存
-        saveFavorite(name: self,userData.images[self.id].name,
-                     isFavorite: self.userData.images[self.id].isFavorite)
       }
     }
   }
@@ -73,3 +73,4 @@ struct ImageListView: View {
       ImageListView(id: 0).environmentObject(UserData())
     }
   }
+}
