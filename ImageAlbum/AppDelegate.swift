@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // お気に入り情報のデフォルト値として空配列を設定
     let userDefaults = UserDefaults.standard
-    userDefaults.register(defaults: [UserDafaultsKey.arrayFavorite: []])
+    userDefaults.register(defaults: [UserDefaultsKey.arrayFavorite: []])
     
     return true
   }

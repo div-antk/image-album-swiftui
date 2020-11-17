@@ -9,9 +9,9 @@ import Foundation
 
 //MARK:- Favorite
 
-struct UserDafaultsKey {
+struct UserDefaultsKey {
   static let arrayFavorite: String = "arrayFavorite" // お気に入り情報の配列
-  static let isApplnit: String = "isApplnit" // 初期化判定
+  static let isAppInit: String = "isAppInit" // 初期化判定
   static let appVersion: String = "appVersion" // アプリバージョン
 }
 
@@ -20,7 +20,7 @@ struct UserDafaultsKey {
 func saveFavorite(name: String, isFavorite: Bool) {
   
   // お気に入り情報の取得
-  let isFavoriteArrayWrap = UserDefaults.standard.stringArray(forKey: UserDafaultsKey.arrayFavorite)
+  let isFavoriteArrayWrap = UserDefaults.standard.stringArray(forKey: UserDefaultsKey.arrayFavorite)
   
   // お気に入り情報がない場合は何もしない
   // guard文で宣言した isFavoriteArray はスコープ外で使用できる
@@ -45,14 +45,14 @@ func saveFavorite(name: String, isFavorite: Bool) {
   }
   // お気に入りを保存
   UserDefaults.standard.set(isFavoriteArray,
-                            forKey: UserDafaultsKey.arrayFavorite)
+                            forKey: UserDefaultsKey.arrayFavorite)
   
   return
 }
 
 // お気に入り情報の取得
 func loadFavorite() -> Array<String> {
-  let isFavoriteArrayWrap = UserDefaults.standard.stringArray(forKey: UserDafaultsKey.arrayFavorite)
+  let isFavoriteArrayWrap = UserDefaults.standard.stringArray(forKey: UserDefaultsKey.arrayFavorite)
   
   // お気に入り情報がない場合
   guard let isFavoriteArray = isFavoriteArrayWrap else {

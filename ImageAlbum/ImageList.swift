@@ -25,7 +25,10 @@ struct ImageList: View {
               item.isFavorite) ||
             self.onlyFavorite == false {
           
-          ImageListView(id: item.id)
+          // NavigationLinkを追加し、ImageScrollを表示させる
+          NavigationLink(destination: ImageScroll(onlyFavorite: self.onlyFavorite)) {
+            ImageListView(id: item.id)
+          }
         }
       }
     }
@@ -39,3 +42,4 @@ struct ImageList_Previews: PreviewProvider {
     ImageList(onlyFavorite: false).environmentObject(UserData())
   }
 }
+

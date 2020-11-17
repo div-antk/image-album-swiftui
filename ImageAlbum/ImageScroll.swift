@@ -16,7 +16,7 @@ struct ImageScroll: View {
   
   var body: some View {
     // スクロール表示する
-    ScrollView(.vartical, showsIndicators: true) {
+    ScrollView(.vertical, showsIndicators: true) {
       
       // 縦に表示
       VStack(alignment: .leading, spacing: 0) {
