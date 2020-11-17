@@ -19,6 +19,7 @@
 		3BC269AE2561152B003609A3 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269AD2561152B003609A3 /* ImageList.swift */; };
 		3BC269B225611A92003609A3 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B125611A92003609A3 /* ImageListView.swift */; };
 		3BC269B8256129B1003609A3 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B7256129B1003609A3 /* Setting.swift */; };
+		3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BB2563EDB3003609A3 /* ImageScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3BC269AD2561152B003609A3 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		3BC269B125611A92003609A3 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		3BC269B7256129B1003609A3 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		3BC269BB2563EDB3003609A3 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				3BC269832560F2F9003609A3 /* AppDelegate.swift */,
 				3BC269852560F2F9003609A3 /* SceneDelegate.swift */,
 				3BC269992561005B003609A3 /* Album.swift */,
+				3BC269BB2563EDB3003609A3 /* ImageScroll.swift */,
 				3BC269AD2561152B003609A3 /* ImageList.swift */,
 				3BC269892560F2FC003609A3 /* Assets.xcassets */,
 				3BC2698E2560F2FC003609A3 /* LaunchScreen.storyboard */,
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */,
 				3BC269AB25610912003609A3 /* UserData.swift in Sources */,
 				3BC269842560F2F9003609A3 /* AppDelegate.swift in Sources */,
 				3BC269B225611A92003609A3 /* ImageListView.swift in Sources */,
