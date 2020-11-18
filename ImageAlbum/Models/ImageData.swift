@@ -18,10 +18,10 @@ struct ImageInfo: Identifiable {
 }
 
 // 画像情報を配列で保持
-let imageInfos: [ImageInfo] = loadImageInfos()
+let imageInfos: [ImageInfo] = loadImageInfo()
 
 // ~/Documentsフォルダ内の画像ファイルをすべて取得する
-func loadImageInfos() -> Array<ImageInfo> {
+func loadImageInfo() -> Array<ImageInfo> {
   // ~/Documentsフォルダ内の画像ファイルをすべて取得する
   let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                           .userDomainMask,

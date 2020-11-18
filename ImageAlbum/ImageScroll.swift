@@ -27,7 +27,7 @@ struct ImageScroll: View {
           // お気に入りのみ表示、もしくはすべての項目を表示する
           if (self.onlyFavorite == true &&
                 item.isFavorite) ||
-                self.onlyFavorite == false {
+              self.onlyFavorite == false {
             
             // 画像の縦横比を維持したままリサイズを表示する
             Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
@@ -46,7 +46,7 @@ struct ImageScroll: View {
 }
 
 struct ImageScroll_Previews: PreviewProvider {
-    static var previews: some View {
-      ImageScroll(onlyFavorite: false).environmentObject(UserData())
-    }
+  static var previews: some View {
+    ImageScroll(onlyFavorite: false).environmentObject(UserData())
+  }
 }

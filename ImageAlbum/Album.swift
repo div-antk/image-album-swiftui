@@ -30,7 +30,7 @@ struct Album: View {
         }
       }
       // VStack{}にnavigationBarTitle()を追加
-      .navigationTitle(Text("アルバム"))
+      .navigationBarTitle(Text("アルバム"))
     }
   }
 }
