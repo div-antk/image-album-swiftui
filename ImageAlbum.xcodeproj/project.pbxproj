@@ -20,6 +20,7 @@
 		3BC269B225611A92003609A3 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B125611A92003609A3 /* ImageListView.swift */; };
 		3BC269B8256129B1003609A3 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B7256129B1003609A3 /* Setting.swift */; };
 		3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BB2563EDB3003609A3 /* ImageScroll.swift */; };
+		3BC269C02567262F003609A3 /* UIImage+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BF2567262F003609A3 /* UIImage+Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3BC269B125611A92003609A3 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		3BC269B7256129B1003609A3 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3BC269BB2563EDB3003609A3 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
+		3BC269BF2567262F003609A3 /* UIImage+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Filter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		3BC269822560F2F9003609A3 /* ImageAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				3BC269BE25672607003609A3 /* Extensions */,
 				3BC269B625612998003609A3 /* Settings */,
 				3BC269A52561089B003609A3 /* Models */,
 				3BC269A025610673003609A3 /* Supporting Views */,
@@ -118,6 +121,14 @@
 				3BC269B7256129B1003609A3 /* Setting.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		3BC269BE25672607003609A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BC269BF2567262F003609A3 /* UIImage+Filter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				3BC269B225611A92003609A3 /* ImageListView.swift in Sources */,
 				3BC269862560F2F9003609A3 /* SceneDelegate.swift in Sources */,
 				3BC269A22561068B003609A3 /* AlbumView.swift in Sources */,
+				3BC269C02567262F003609A3 /* UIImage+Filter.swift in Sources */,
 				3BC269AE2561152B003609A3 /* ImageList.swift in Sources */,
 				3BC269A7256108C4003609A3 /* ImageData.swift in Sources */,
 				3BC2699A2561005B003609A3 /* Album.swift in Sources */,
