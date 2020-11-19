@@ -22,12 +22,10 @@ struct ImageScroll: View {
       VStack(alignment: .leading, spacing: 0) {
         
         // 画像情報からすべての画像を取得する
-        ForEach(self.userData.images) { item is
+        ForEach(self.userData.images) { item in
           
           // お気に入りのみ表示、もしくはすべての項目を表示する
-          if (self.onlyFavorite == true &&
-                item.isFavorite) ||
-              self.onlyFavorite == false {
+          if (self.onlyFavorite == true && item.isFavorite) || self.onlyFavorite == false {
             
             // 画像の縦横比を維持したままリサイズを表示する
             Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
