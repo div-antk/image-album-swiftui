@@ -46,14 +46,38 @@ struct ImageScroll: View {
             ForEach(self.userData.images) { item in
               
               // お気に入りのみ表示、もしくはすべての項目を表示する
-              if (self.onlyFavorite == true && item.isFavorite) || self.onlyFavorite == false {
+              if (self.onlyFavorite == true &&
+                    item.isFavorite) ||
+                  self.onlyFavorite == false {
                 
+                // グレースケール（CGImageによる画像処理）
+                if self.kindImage == KindStructImage.grayscale {
+                  Image(uiImage: (UIImage.init(contentsOfFile: item.path)?.grayScale())!)
+                    .resizable()
+                }
+                // 色調反転。縦横比を維持する処理をも追加する（Imageビューのメソッドによるビュー色の変更）
+                else if self.kindImage == KindStructImage.colorInvert {
+                  Image(uiImage: (UIImage.init(contentsOfFile: item.path)?.grayScale())!)
+                    .resizable()
+                    .colorInvert()
+                }
+                // セピア（CGImageによる画像処理）
+                else if self.kindImage == KindStructImage.sepia {
+                  Image(uiImage: UIImage.sepia(path: item.path))
+                    .resizable()
+                }
+                // 通常
+                else {
+                  Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
+                    .resizable()
+                }
                 // 画像の縦横比を維持したままリサイズを表示する
                 Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
                   .resizable()
                   .aspectRatio(contentMode: .fit)
               }
             }
+            .aspectRatio(contentMode: .fit)
           }
         }
         // 編集状態の場合ツールバーを表示
