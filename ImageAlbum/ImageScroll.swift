@@ -57,7 +57,7 @@ struct ImageScroll: View {
                 }
                 // 色調反転。縦横比を維持する処理をも追加する（Imageビューのメソッドによるビュー色の変更）
                 else if self.kindImage == KindStructImage.colorInvert {
-                  Image(uiImage: (UIImage.init(contentsOfFile: item.path)?.grayScale())!)
+                  Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
                     .resizable()
                     .colorInvert()
                 }

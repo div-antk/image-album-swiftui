@@ -21,6 +21,7 @@
 		3BC269B8256129B1003609A3 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269B7256129B1003609A3 /* Setting.swift */; };
 		3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BB2563EDB3003609A3 /* ImageScroll.swift */; };
 		3BC269C02567262F003609A3 /* UIImage+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BF2567262F003609A3 /* UIImage+Filter.swift */; };
+		3BFF9F1B256A511C00A1ABB5 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3BC269B7256129B1003609A3 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3BC269BB2563EDB3003609A3 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
 		3BC269BF2567262F003609A3 /* UIImage+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Filter.swift"; sourceTree = "<group>"; };
+		3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC269A6256108C4003609A3 /* ImageData.swift */,
+				3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */,
 				3BC269AA25610912003609A3 /* UserData.swift */,
 			);
 			path = Models;
@@ -206,6 +209,7 @@
 				3BC269842560F2F9003609A3 /* AppDelegate.swift in Sources */,
 				3BC269B225611A92003609A3 /* ImageListView.swift in Sources */,
 				3BC269862560F2F9003609A3 /* SceneDelegate.swift in Sources */,
+				3BFF9F1B256A511C00A1ABB5 /* SpeechRecognizer.swift in Sources */,
 				3BC269A22561068B003609A3 /* AlbumView.swift in Sources */,
 				3BC269C02567262F003609A3 /* UIImage+Filter.swift in Sources */,
 				3BC269AE2561152B003609A3 /* ImageList.swift in Sources */,

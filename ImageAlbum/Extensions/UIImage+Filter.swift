@@ -63,7 +63,7 @@ extension UIImage {
       return UIImage.init()
     }
     
-    // CIFiterでセピア設定
+    // CIFilterでセピア設定
     let ciFilterWrap: CIFilter? = CIFilter(name: "CISepiaTone")
     
     guard let ciFilter = ciFilterWrap else {
