@@ -17,13 +17,21 @@ struct KindStructImage {
 
 struct ImageScroll: View {
   // 画像情報を使用
+  // EnvironmentObjectは複数のビューに使用する
   @EnvironmentObject private var userData: UserData
+  
+  // 音声データクラスを生成
+  // ObservedObjectは単一のビューに使用する（画像スクロール画面のみ）
+  @ObservedObject private var speech: SpeechData = SpeechData()
   
   // 編集モードの状態（編集:active 完了:inactive）初期値は完了状態
   @State private var isEditMode: EditMode = .inactive
   
   // 画像処理の種別
   @State private var kindImage: Int = KindStructImage.regular
+  
+  // 音声認識フラグ
+  @State private var isSpeech: Bool = false
   
   // お気に入りのみ表示するかの判定
   var onlyFavorite: Bool
@@ -71,13 +79,15 @@ struct ImageScroll: View {
                   Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
                     .resizable()
                 }
-                // 画像の縦横比を維持したままリサイズを表示する
-                Image(uiImage: UIImage.init(contentsOfFile: item.path)!)
-                  .resizable()
-                  .aspectRatio(contentMode: .fit)
               }
             }
             .aspectRatio(contentMode: .fit)
+            
+            // 回転アニメーション
+            .rotationEffect(.degrees(self.speech.isRotation ? 360 : 0))
+            
+            // 詳細なアニメーション設定
+            .animation(self.speech.isRotation ? self.animation :.none)
           }
         }
         // 編集状態の場合ツールバーを表示
@@ -100,6 +110,29 @@ struct ImageScroll: View {
               }
             // 余白を追加する
             Spacer()
+            
+            // 音声認識ボタンをツールバーに追加
+            Button(action: {
+              
+              if self.isSpeech {
+                // 音声認識停止
+                self.speech.stop()
+              
+              } else {
+                // 音声認識開始
+                self.speech.start()
+              }
+              self.isSpeech.toggle()
+            }) {
+              // マイク画像
+              if self.isSpeech {
+                Image(systemName: "mic")
+                  .foregroundColor(Color.red)
+              } else {
+                Image(systemName: "mic")
+                  .foregroundColor(Color.green)
+              }
+            }
             
             // 色調反転ボタン
             Button(action: {
@@ -149,6 +182,32 @@ struct ImageScroll: View {
       // 編集モードを渡す
       .environment(\.editMode, self.$isEditMode)
     }
+    // 画面表示時に音声認識の許可ダイアログを表示（初回のみ）
+    // onAppearは画像スクロール画面が表示されたときに()内の処理を実行
+    .onAppear(perform: speechAuthorization)
+    
+    // 画面表示時に音声認識を停止
+    // onDisappearは画像スクロール画面が非表示になると speechStopメソッドを実行
+    .onDisappear(perform: speechStop)
+  }
+  // 詳細なアニメーション設定
+  var animation: Animation {
+    // アニメーションの初期速度や減衰量を設定
+    Animation.interpolatingSpring(
+      mass: 1,
+      stiffness: 2,
+      damping: 0.8,
+      initialVelocity: 2
+    ) .speed(2)
+  }
+  
+  // 音声認識を停止
+  func speechStop() {
+    self.speech.stop()
+  }
+  // 音声認識の許可ダイアログを表示
+  func speechAuthorization() {
+    self.speech.authorization()
   }
 }
 
