@@ -22,6 +22,7 @@
 		3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BB2563EDB3003609A3 /* ImageScroll.swift */; };
 		3BC269C02567262F003609A3 /* UIImage+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC269BF2567262F003609A3 /* UIImage+Filter.swift */; };
 		3BFF9F1B256A511C00A1ABB5 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */; };
+		3BFF9F1E256B846900A1ABB5 /* SpeechData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFF9F1D256B846900A1ABB5 /* SpeechData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3BC269BB2563EDB3003609A3 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
 		3BC269BF2567262F003609A3 /* UIImage+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Filter.swift"; sourceTree = "<group>"; };
 		3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		3BFF9F1D256B846900A1ABB5 /* SpeechData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				3BC269A6256108C4003609A3 /* ImageData.swift */,
 				3BFF9F1A256A511C00A1ABB5 /* SpeechRecognizer.swift */,
+				3BFF9F1D256B846900A1ABB5 /* SpeechData.swift */,
 				3BC269AA25610912003609A3 /* UserData.swift */,
 			);
 			path = Models;
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC269BC2563EDB3003609A3 /* ImageScroll.swift in Sources */,
+				3BFF9F1E256B846900A1ABB5 /* SpeechData.swift in Sources */,
 				3BC269AB25610912003609A3 /* UserData.swift in Sources */,
 				3BC269842560F2F9003609A3 /* AppDelegate.swift in Sources */,
 				3BC269B225611A92003609A3 /* ImageListView.swift in Sources */,
