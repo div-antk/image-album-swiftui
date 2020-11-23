@@ -19,6 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // お気に入り情報のデフォルト値として空配列を設定
     let userDefaults = UserDefaults.standard
+    
+    // すべてのUserDefaults値を初期化
+    // UserDefaultsのキーにAppInitを指定して初期化判定値を取得
+    let isAppInit = userDefaults.bool(forKey: UserDefaultsKey.isAppInit)
+    if isAppInit {
+      
+      // バンドルID（アプリ固有のID）を取得してremovePersistentDomainに渡すとUserDefaultsのすべての値が削除されて初期値に置き換わる
+      // つまり設定アプリにて初期化スイッチ（AppInit）をONにすると以下の処理で値が初期化する
+      if let bundleId = Bundle.main.bundleIdentifier {
+        userDefaults.removePersistentDomain(forName: bundleId)
+      }
+    }
+    
+    // アプリバージョンを取得してUserDefaults（appVersion）に保存
+    // ここで保存したアプリバージョンが設定アプリで表示されるß
+    if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") {
+      userDefaults.set(appVersion, forKey: UserDefaultsKey.appVersion)
+    }
+    
     userDefaults.register(defaults: [UserDefaultsKey.arrayFavorite: []])
     
     return true
